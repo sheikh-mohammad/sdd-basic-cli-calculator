@@ -1,16 +1,12 @@
-# Basic CLI Calculator
+# Quickstart: Basic CLI Calculator
 
-A simple command-line calculator that performs basic arithmetic operations (addition, subtraction, multiplication, division) with support for decimal and negative numbers.
+**Feature**: Basic CLI Calculator
+**Date**: 2026-03-27
+**Phase**: 1 - Design & Contracts
 
-## Features
+## Overview
 
-- ✅ Addition, subtraction, multiplication, division
-- ✅ Support for decimal numbers
-- ✅ Support for negative numbers
-- ✅ Error handling for division by zero
-- ✅ Input validation with clear error messages
-- ✅ Type hints on all functions
-- ✅ Comprehensive test coverage
+This quickstart guide explains how to use and develop the basic CLI calculator.
 
 ## Installation
 
@@ -101,22 +97,6 @@ python -m src.cli 5 +
 
 ## Development
 
-### Running Tests
-
-```bash
-# Run all tests
-pytest
-
-# Run with coverage
-pytest --cov=src
-
-# Run specific test file
-pytest tests/unit/test_calculator.py
-
-# Run with verbose output
-pytest -v
-```
-
 ### Project Structure
 
 ```
@@ -133,9 +113,25 @@ tests/
 pyproject.toml         # Project configuration
 ```
 
+### Running Tests
+
+```bash
+# Run all tests
+pytest
+
+# Run with coverage
+pytest --cov=src
+
+# Run specific test file
+pytest tests/unit/test_calculator.py
+
+# Run with verbose output
+pytest -v
+```
+
 ### Code Style
 
-All code includes type hints:
+All code must include type hints:
 
 ```python
 def add(a: float, b: float) -> float:
@@ -152,6 +148,29 @@ def add(a: float, b: float) -> float:
 5. Refactor if needed (Refactor)
 6. Commit with clear message
 
+### Example: Adding a New Operation
+
+If we were to add a new operation (e.g., modulo), the workflow would be:
+
+1. **Red**: Write test in `tests/unit/test_calculator.py`
+   ```python
+   def test_modulo():
+       assert modulo(10, 3) == 1
+   ```
+
+2. **Green**: Implement in `src/calculator.py`
+   ```python
+   def modulo(a: float, b: float) -> float:
+       """Return remainder of a divided by b."""
+       if b == 0:
+           raise ValueError("Division by zero")
+       return a % b
+   ```
+
+3. **Refactor**: Review and optimize if needed
+
+4. **Update CLI**: Add operator handling in `src/cli.py`
+
 ## Architecture
 
 ### Core Logic (`src/calculator.py`)
@@ -159,7 +178,7 @@ def add(a: float, b: float) -> float:
 - Pure functions with no side effects
 - All functions have type hints
 - Each operation is independently testable
-- Raises `ValueError` for invalid operations
+- Raises `ValueError` for invalid operations (e.g., division by zero)
 
 ### CLI Interface (`src/cli.py`)
 
@@ -169,12 +188,49 @@ def add(a: float, b: float) -> float:
 - Formats and displays results
 - Handles errors gracefully
 
-## Testing
+### Testing
 
 - **Unit tests**: Test calculator functions in isolation
 - **Integration tests**: Test CLI with subprocess calls
 - **Coverage goal**: >80% of code
 
-## License
+## Troubleshooting
 
-MIT
+### "ModuleNotFoundError: No module named 'src'"
+
+Ensure you're running from the repository root and have activated the virtual environment:
+
+```bash
+cd sdd-basic-cli-calculator
+source .venv/bin/activate
+python -m src.cli 2 + 3
+```
+
+### "Invalid operand" error with negative numbers
+
+Negative numbers must come after the operator or be quoted:
+
+```bash
+# Correct
+python -m src.cli -- -5 + 3
+python -m src.cli "-5" + 3
+
+# Incorrect (shell interprets -5 as flag)
+python -m src.cli -5 + 3
+```
+
+### Precision issues with decimals
+
+Python's `float` uses IEEE 754 standard precision. For most use cases, this is sufficient:
+
+```bash
+python -m src.cli 0.1 + 0.2
+# Output: 0.30000000000000004 (expected floating-point behavior)
+```
+
+## Next Steps
+
+- Run tests: `pytest`
+- Review code: `src/calculator.py` and `src/cli.py`
+- Extend functionality: Add new operations following TDD workflow
+- Deploy: Package as executable or distribute via PyPI
