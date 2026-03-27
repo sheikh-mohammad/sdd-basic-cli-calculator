@@ -4,6 +4,8 @@ import subprocess
 import sys
 from typing import Tuple
 
+import pytest
+
 
 def run_calculator(args: list[str]) -> Tuple[str, str, int]:
     """Run calculator CLI and return stdout, stderr, and exit code.
@@ -78,14 +80,46 @@ class TestCLIDecimalOperations:
         assert float(stdout) == pytest.approx(3.333333, abs=0.001)
 
 
-class TestCLIErrorHandling:
-    """Tests for CLI error handling."""
+class TestCLINegativeNumbers:
+    """Tests for CLI with negative numbers."""
 
-    def test_cli_division_by_zero(self) -> None:
-        """Test CLI division by zero error."""
+    def test_cli_negative_addition(self) -> None:
+        """Test CLI addition with negative numbers."""
+        stdout, stderr, code = run_calculator(["-5", "+", "3"])
+        assert code == 0
+        assert stdout == "-2"
+
+    def test_cli_negative_multiplication(self) -> None:
+        """Test CLI multiplication with negative numbers."""
+        stdout, stderr, code = run_calculator(["10", "*", "-2"])
+        assert code == 0
+        assert stdout == "-20"
+
+    def test_cli_negative_division(self) -> None:
+        """Test CLI division with negative numbers."""
+        stdout, stderr, code = run_calculator(["-10", "/", "-2"])
+        assert code == 0
+        assert stdout == "5"
+
+
+class TestCLIDivisionByZero:
+    """Tests for CLI division by zero error handling."""
+
+    def test_cli_division_by_zero_integer(self) -> None:
+        """Test CLI division by zero with integer."""
         stdout, stderr, code = run_calculator(["10", "/", "0"])
         assert code == 1
         assert "Division by zero" in stderr
+
+    def test_cli_division_by_zero_decimal(self) -> None:
+        """Test CLI division by zero with decimal."""
+        stdout, stderr, code = run_calculator(["5.5", "/", "0"])
+        assert code == 1
+        assert "Division by zero" in stderr
+
+
+class TestCLIErrorHandling:
+    """Tests for CLI error handling."""
 
     def test_cli_invalid_operand(self) -> None:
         """Test CLI with invalid operand."""
@@ -105,7 +139,4 @@ class TestCLIErrorHandling:
         assert code == 1
         assert "Invalid number of arguments" in stderr or "expected 3" in stderr
 
-
-# Import pytest for approx
-import pytest
 

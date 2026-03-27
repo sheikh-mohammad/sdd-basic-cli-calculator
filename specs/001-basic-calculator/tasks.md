@@ -113,13 +113,13 @@ description: "Task list for Basic CLI Calculator implementation"
 
 ### Tests for User Story 3 (TDD - Write FIRST, ensure they FAIL)
 
-- [ ] T030 [P] [US3] Write unit tests for negative operands in tests/unit/test_calculator.py (test cases: -5+3=-2, 10*-2=-20, -10/-2=5)
-- [ ] T031 [US3] Write integration tests for CLI with negative numbers in tests/integration/test_cli.py (test: `python -m src.cli -5 + 3` outputs `-2`)
+- [x] T030 [P] [US3] Write unit tests for negative operands in tests/unit/test_calculator.py (test cases: -5+3=-2, 10*-2=-20, -10/-2=5)
+- [x] T031 [US3] Write integration tests for CLI with negative numbers in tests/integration/test_cli.py (test: `python -m src.cli -5 + 3` outputs `-2`)
 
 ### Implementation for User Story 3
 
-- [ ] T032 [US3] Update src/cli.py argument parsing to handle negative numbers (use -- separator or quoted args)
-- [ ] T033 [US3] Run all User Story 3 tests and verify they PASS
+- [x] T032 [US3] Update src/cli.py argument parsing to handle negative numbers (use -- separator or quoted args)
+- [x] T033 [US3] Run all User Story 3 tests and verify they PASS
 
 **Checkpoint**: User Stories 1, 2, AND 3 should all work independently with negative number support
 
@@ -133,15 +133,15 @@ description: "Task list for Basic CLI Calculator implementation"
 
 ### Tests for User Story 4 (TDD - Write FIRST, ensure they FAIL)
 
-- [ ] T034 [P] [US4] Write unit tests for division by zero in tests/unit/test_calculator.py (test: divide(10, 0) raises ValueError)
-- [ ] T035 [US4] Write integration tests for CLI division by zero in tests/integration/test_cli.py (test: `python -m src.cli 10 / 0` outputs error to stderr, exit code 1)
+- [x] T034 [P] [US4] Write unit tests for division by zero in tests/unit/test_calculator.py (test: divide(10, 0) raises ValueError)
+- [x] T035 [US4] Write integration tests for CLI division by zero in tests/integration/test_cli.py (test: `python -m src.cli 10 / 0` outputs error to stderr, exit code 1)
 
 ### Implementation for User Story 4
 
-- [ ] T036 [US4] Add division by zero check in divide() function in src/calculator.py (raise ValueError("Division by zero"))
-- [ ] T037 [US4] Add error handling in main() in src/cli.py to catch ValueError and print to stderr
-- [ ] T038 [US4] Ensure main() returns exit code 1 on error in src/cli.py
-- [ ] T039 [US4] Run all User Story 4 tests and verify they PASS
+- [x] T036 [US4] Add division by zero check in divide() function in src/calculator.py (raise ValueError("Division by zero"))
+- [x] T037 [US4] Add error handling in main() in src/cli.py to catch ValueError and print to stderr
+- [x] T038 [US4] Ensure main() returns exit code 1 on error in src/cli.py
+- [x] T039 [US4] Run all User Story 4 tests and verify they PASS
 
 **Checkpoint**: User Stories 1-4 should all work independently with error handling for division by zero
 
