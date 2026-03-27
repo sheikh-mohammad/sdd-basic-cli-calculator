@@ -155,19 +155,19 @@ description: "Task list for Basic CLI Calculator implementation"
 
 ### Tests for User Story 5 (TDD - Write FIRST, ensure they FAIL)
 
-- [ ] T040 [P] [US5] Write unit tests for invalid operand parsing in tests/unit/test_calculator.py (test: parse_operand("abc") raises ValueError)
-- [ ] T041 [P] [US5] Write unit tests for invalid operator validation in tests/unit/test_calculator.py (test: validate_operator("^") raises ValueError)
-- [ ] T042 [P] [US5] Write integration tests for CLI invalid input in tests/integration/test_cli.py (test: `python -m src.cli abc + 5` outputs error to stderr)
-- [ ] T043 [P] [US5] Write integration tests for CLI invalid operator in tests/integration/test_cli.py (test: `python -m src.cli 5 ^ 3` outputs error to stderr)
-- [ ] T044 [US5] Write integration tests for CLI missing arguments in tests/integration/test_cli.py (test: `python -m src.cli 5 +` outputs error to stderr)
+- [x] T040 [P] [US5] Write unit tests for invalid operand parsing in tests/unit/test_calculator.py (test: parse_operand("abc") raises ValueError)
+- [x] T041 [P] [US5] Write unit tests for invalid operator validation in tests/unit/test_calculator.py (test: validate_operator("^") raises ValueError)
+- [x] T042 [P] [US5] Write integration tests for CLI invalid input in tests/integration/test_cli.py (test: `python -m src.cli abc + 5` outputs error to stderr)
+- [x] T043 [P] [US5] Write integration tests for CLI invalid operator in tests/integration/test_cli.py (test: `python -m src.cli 5 ^ 3` outputs error to stderr)
+- [x] T044 [US5] Write integration tests for CLI missing arguments in tests/integration/test_cli.py (test: `python -m src.cli 5 +` outputs error to stderr)
 
 ### Implementation for User Story 5
 
-- [ ] T045 [US5] Add input validation in main() in src/cli.py to check argument count (raise ValueError if not 3 args)
-- [ ] T046 [US5] Add operand parsing with error handling in src/cli.py (catch ValueError from float() parsing)
-- [ ] T047 [US5] Add operator validation in src/cli.py (check operator is in {+, -, *, /})
-- [ ] T048 [US5] Update error messages in src/cli.py to be clear and actionable (e.g., "Error: Invalid operand 'abc' - must be a number")
-- [ ] T049 [US5] Run all User Story 5 tests and verify they PASS
+- [x] T045 [US5] Add input validation in main() in src/cli.py to check argument count (raise ValueError if not 3 args)
+- [x] T046 [US5] Add operand parsing with error handling in src/cli.py (catch ValueError from float() parsing)
+- [x] T047 [US5] Add operator validation in src/cli.py (check operator is in {+, -, *, /})
+- [x] T048 [US5] Update error messages in src/cli.py to be clear and actionable (e.g., "Error: Invalid operand 'abc' - must be a number")
+- [x] T049 [US5] Run all User Story 5 tests and verify they PASS
 
 **Checkpoint**: All user stories (1-5) should now be independently functional with complete error handling
 
@@ -177,14 +177,14 @@ description: "Task list for Basic CLI Calculator implementation"
 
 **Purpose**: Improvements that affect multiple user stories
 
-- [ ] T050 [P] Run full test suite with pytest and verify all tests PASS
-- [ ] T051 [P] Check code coverage with pytest --cov=src (aim for >80%)
-- [ ] T052 [P] Add type checking with mypy on src/ directory
-- [ ] T053 Run quickstart.md validation (follow all examples and verify they work)
-- [ ] T054 Update README.md with complete usage examples and error cases
-- [ ] T055 Add docstrings to all functions in src/calculator.py and src/cli.py
-- [ ] T056 Verify all code follows PEP 8 style guidelines
-- [ ] T057 Create .gitignore for Python project (venv, __pycache__, .pytest_cache, etc.)
+- [x] T050 [P] Run full test suite with pytest and verify all tests PASS
+- [x] T051 [P] Check code coverage with pytest --cov=src (aim for >80%)
+- [x] T052 [P] Add type checking with mypy on src/ directory
+- [x] T053 Run quickstart.md validation (follow all examples and verify they work)
+- [x] T054 Update README.md with complete usage examples and error cases
+- [x] T055 Add docstrings to all functions in src/calculator.py and src/cli.py
+- [x] T056 Verify all code follows PEP 8 style guidelines
+- [x] T057 Create .gitignore for Python project (venv, __pycache__, .pytest_cache, etc.)
 
 ---
 
