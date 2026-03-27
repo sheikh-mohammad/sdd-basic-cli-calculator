@@ -28,10 +28,10 @@ description: "Task list for Basic CLI Calculator implementation"
 
 **Purpose**: Project initialization and basic structure
 
-- [ ] T001 Create project structure: `src/`, `tests/unit/`, `tests/integration/` directories
-- [ ] T002 Initialize pyproject.toml with pytest dependency and Python 3.8+ requirement
-- [ ] T003 [P] Create `__init__.py` files in src/ and tests/ directories
-- [ ] T004 Create README.md with project overview and usage instructions
+- [x] T001 Create project structure: `src/`, `tests/unit/`, `tests/integration/` directories
+- [x] T002 Initialize pyproject.toml with pytest dependency and Python 3.8+ requirement
+- [x] T003 [P] Create `__init__.py` files in src/ and tests/ directories
+- [x] T004 Create README.md with project overview and usage instructions
 
 ---
 
@@ -41,11 +41,11 @@ description: "Task list for Basic CLI Calculator implementation"
 
 **⚠️ CRITICAL**: No user story work can begin until this phase is complete
 
-- [ ] T005 Create `src/calculator.py` module skeleton with type hints
-- [ ] T006 Create `src/cli.py` module skeleton with main entry point
-- [ ] T007 Create `tests/unit/test_calculator.py` test file skeleton
-- [ ] T008 Create `tests/integration/test_cli.py` test file skeleton
-- [ ] T009 Configure pytest in pyproject.toml with test discovery paths
+- [x] T005 Create `src/calculator.py` module skeleton with type hints
+- [x] T006 Create `src/cli.py` module skeleton with main entry point
+- [x] T007 Create `tests/unit/test_calculator.py` test file skeleton
+- [x] T008 Create `tests/integration/test_cli.py` test file skeleton
+- [x] T009 Configure pytest in pyproject.toml with test discovery paths
 
 **Checkpoint**: Foundation ready - user story implementation can now begin in parallel
 
