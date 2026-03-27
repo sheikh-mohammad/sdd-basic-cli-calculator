@@ -6,3 +6,5 @@
 ## Features
 - [Create Basic Calculator Specification](001-basic-calculator/2-create-basic-calculator-specification.spec.prompt.md) — Feature spec for CLI calculator with arithmetic operations and error handling
 - [Design Basic Calculator Implementation Plan](001-basic-calculator/3-design-basic-calculator-implementation-plan.plan.prompt.md) — Architecture, design decisions, and contracts for calculator implementation
+- [Generate Basic Calculator Implementation Tasks](001-basic-calculator/4-generate-basic-calculator-implementation-tasks.tasks.prompt.md) — Task breakdown with TDD approach; 57 tasks across 8 phases
+
