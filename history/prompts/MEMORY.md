@@ -8,5 +8,7 @@
 - [Design Basic Calculator Implementation Plan](001-basic-calculator/3-design-basic-calculator-implementation-plan.plan.prompt.md) — Architecture, design decisions, and contracts for calculator implementation
 - [Generate Basic Calculator Implementation Tasks](001-basic-calculator/4-generate-basic-calculator-implementation-tasks.tasks.prompt.md) — Task breakdown with TDD approach; 57 tasks across 8 phases
 - [Implement Phase 1 and Phase 2 Setup](001-basic-calculator/5-implement-phase-1-and-phase-2-setup.red.prompt.md) — Project initialization and foundational infrastructure complete
+- [Implement Phase 3 and Phase 4 User Stories](001-basic-calculator/6-implement-phase-3-and-phase-4-user-stories.green.prompt.md) — User Story 1 (basic arithmetic) and User Story 2 (decimal support) complete; 29/29 tests pass
+
 
 

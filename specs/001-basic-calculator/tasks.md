@@ -61,22 +61,22 @@ description: "Task list for Basic CLI Calculator implementation"
 
 > **NOTE: Write these tests FIRST, ensure they FAIL before implementation**
 
-- [ ] T010 [P] [US1] Write unit tests for add() function in tests/unit/test_calculator.py (test cases: 2+3=5, -5+3=-2, 0+0=0)
-- [ ] T011 [P] [US1] Write unit tests for subtract() function in tests/unit/test_calculator.py (test cases: 10-4=6, 5-10=-5, 0-0=0)
-- [ ] T012 [P] [US1] Write unit tests for multiply() function in tests/unit/test_calculator.py (test cases: 6*7=42, -5*2=-10, 0*5=0)
-- [ ] T013 [P] [US1] Write unit tests for divide() function in tests/unit/test_calculator.py (test cases: 20/4=5, 10/2=5, -10/-2=5)
-- [ ] T014 [P] [US1] Write integration tests for CLI with basic operations in tests/integration/test_cli.py (test: `python -m src.cli 2 + 3` outputs `5`)
+- [x] T010 [P] [US1] Write unit tests for add() function in tests/unit/test_calculator.py (test cases: 2+3=5, -5+3=-2, 0+0=0)
+- [x] T011 [P] [US1] Write unit tests for subtract() function in tests/unit/test_calculator.py (test cases: 10-4=6, 5-10=-5, 0-0=0)
+- [x] T012 [P] [US1] Write unit tests for multiply() function in tests/unit/test_calculator.py (test cases: 6*7=42, -5*2=-10, 0*5=0)
+- [x] T013 [P] [US1] Write unit tests for divide() function in tests/unit/test_calculator.py (test cases: 20/4=5, 10/2=5, -10/-2=5)
+- [x] T014 [P] [US1] Write integration tests for CLI with basic operations in tests/integration/test_cli.py (test: `python -m src.cli 2 + 3` outputs `5`)
 
 ### Implementation for User Story 1
 
-- [ ] T015 [P] [US1] Implement add(a: float, b: float) -> float in src/calculator.py
-- [ ] T016 [P] [US1] Implement subtract(a: float, b: float) -> float in src/calculator.py
-- [ ] T017 [P] [US1] Implement multiply(a: float, b: float) -> float in src/calculator.py
-- [ ] T018 [P] [US1] Implement divide(a: float, b: float) -> float in src/calculator.py (no error handling yet)
-- [ ] T019 [US1] Implement main(args: list[str]) -> int in src/cli.py to parse arguments and call calculator functions
-- [ ] T020 [US1] Implement result formatting in src/cli.py to display integers without decimal point
-- [ ] T021 [US1] Add __main__ entry point in src/cli.py to enable `python -m src.cli` invocation
-- [ ] T022 [US1] Run all User Story 1 tests and verify they PASS
+- [x] T015 [P] [US1] Implement add(a: float, b: float) -> float in src/calculator.py
+- [x] T016 [P] [US1] Implement subtract(a: float, b: float) -> float in src/calculator.py
+- [x] T017 [P] [US1] Implement multiply(a: float, b: float) -> float in src/calculator.py
+- [x] T018 [P] [US1] Implement divide(a: float, b: float) -> float in src/calculator.py (no error handling yet)
+- [x] T019 [US1] Implement main(args: list[str]) -> int in src/cli.py to parse arguments and call calculator functions
+- [x] T020 [US1] Implement result formatting in src/cli.py to display integers without decimal point
+- [x] T021 [US1] Add __main__ entry point in src/cli.py to enable `python -m src.cli` invocation
+- [x] T022 [US1] Run all User Story 1 tests and verify they PASS
 
 **Checkpoint**: User Story 1 should be fully functional and testable independently
 
@@ -90,16 +90,16 @@ description: "Task list for Basic CLI Calculator implementation"
 
 ### Tests for User Story 2 (TDD - Write FIRST, ensure they FAIL)
 
-- [ ] T023 [P] [US2] Write unit tests for decimal addition in tests/unit/test_calculator.py (test cases: 3.5+2.1=5.6, 0.1+0.2≈0.3)
-- [ ] T024 [P] [US2] Write unit tests for decimal subtraction in tests/unit/test_calculator.py (test cases: 10.5-3.2=7.3)
-- [ ] T025 [P] [US2] Write unit tests for decimal multiplication in tests/unit/test_calculator.py (test cases: 2.5*4=10.0)
-- [ ] T026 [P] [US2] Write unit tests for decimal division in tests/unit/test_calculator.py (test cases: 10/3≈3.333...)
-- [ ] T027 [US2] Write integration tests for CLI with decimal operations in tests/integration/test_cli.py (test: `python -m src.cli 3.5 + 2.1` outputs `5.6`)
+- [x] T023 [P] [US2] Write unit tests for decimal addition in tests/unit/test_calculator.py (test cases: 3.5+2.1=5.6, 0.1+0.2≈0.3)
+- [x] T024 [P] [US2] Write unit tests for decimal subtraction in tests/unit/test_calculator.py (test cases: 10.5-3.2=7.3)
+- [x] T025 [P] [US2] Write unit tests for decimal multiplication in tests/unit/test_calculator.py (test cases: 2.5*4=10.0)
+- [x] T026 [P] [US2] Write unit tests for decimal division in tests/unit/test_calculator.py (test cases: 10/3≈3.333...)
+- [x] T027 [US2] Write integration tests for CLI with decimal operations in tests/integration/test_cli.py (test: `python -m src.cli 3.5 + 2.1` outputs `5.6`)
 
 ### Implementation for User Story 2
 
-- [ ] T028 [US2] Update result formatting in src/cli.py to handle decimal display (remove trailing zeros, e.g., 10.0 → 10, 5.6 → 5.6)
-- [ ] T029 [US2] Run all User Story 2 tests and verify they PASS
+- [x] T028 [US2] Update result formatting in src/cli.py to handle decimal display (remove trailing zeros, e.g., 10.0 → 10, 5.6 → 5.6)
+- [x] T029 [US2] Run all User Story 2 tests and verify they PASS
 
 **Checkpoint**: User Stories 1 AND 2 should both work independently with decimal support
 

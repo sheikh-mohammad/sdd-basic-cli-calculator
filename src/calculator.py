@@ -11,7 +11,7 @@ def add(a: float, b: float) -> float:
     Returns:
         Sum of a and b
     """
-    pass
+    return a + b
 
 
 def subtract(a: float, b: float) -> float:
@@ -24,7 +24,7 @@ def subtract(a: float, b: float) -> float:
     Returns:
         Difference (a - b)
     """
-    pass
+    return a - b
 
 
 def multiply(a: float, b: float) -> float:
@@ -37,7 +37,7 @@ def multiply(a: float, b: float) -> float:
     Returns:
         Product of a and b
     """
-    pass
+    return a * b
 
 
 def divide(a: float, b: float) -> float:
@@ -53,4 +53,7 @@ def divide(a: float, b: float) -> float:
     Raises:
         ValueError: If b is zero (division by zero)
     """
-    pass
+    if b == 0:
+        raise ValueError("Division by zero")
+    return a / b
+
